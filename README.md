@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/DrD-Flo/OTTO/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Boostrap 4 Github Pages
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Build Status](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages.svg?branch=master)](https://travis-ci.org/nicolas-van/bootstrap-4-github-pages)
 
-### Markdown
+A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
+* Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
+* Full support of Bootstrap's JavaScript plugins.
+* Supports all features of Github Pages and Jekyll.
 
-```markdown
-Syntax highlighted code block
+[See the website for demonstration and documentation](https://nicolas-van.github.io/bootstrap-4-github-pages/).
 
-# Header 1
-## Header 2
-### Header 3
+## Contribution
 
-- Bulleted
-- List
+[See the contribution guide.](./CONTRIBUTING.md)
 
-1. Numbered
-2. List
+## License
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DrD-Flo/OTTO/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[See the license file.](./LICENSE.md)
