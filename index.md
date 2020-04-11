@@ -3,7 +3,6 @@ layout: page
 title: OTTO: The Open-Source and Affordable Liquid Handler for Automated Micropipetting
 ---
 
-## OTTO: The Open-Source and Affordable Liquid Handler for Automated Micropipetting
 OTTO is a liquid handler that can automatically prepare samples for qPCR, flow cytometry, and other biological assays that rely on accurate liquid dispensing. Otto is also:
 * a linear motion platform that balances speed and accuracy for timely sample preparation
 * capable of lights out sample preparation (set it up and walk away!)
