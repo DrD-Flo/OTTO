@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Open-Source and Affordable Liquid Handler for Automated Micropipetting
+title: OTTO: The Open-Source and Affordable Liquid Handler for Automated Micropipetting
 ---
 
 A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
@@ -8,7 +8,7 @@ A [Bootstrap 4](https://getbootstrap.com/) start up project for [Github Pages](h
 * A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
 * Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
 * Full support of Bootstrap's JavaScript plugins.
-* Supports all features of Github Pages and Jekyll.
+* Supports all features of Github Pages and Jekyll. <i class="fad fa-vial"></i>
 
 ## Setup Guide
 
