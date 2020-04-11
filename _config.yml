@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bootstrap 4 Github Pages
+title: Open-Source Liquid Handler
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  A Bootstrap 4 start up project for Jekyll and Github Pages
+  OTTO is an open-source liquid handler that can automatically prepare samples for qPCR, flow cytometry, and other biological assays that rely on accurate liquid dispensing. It features designs that optimize speed and accuracy, unattended automation, and modular components, all with easily sourceable or 3D-printable parts.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
-repository: "nicolas-van/bootstrap-4-github-pages"
+repository: "drd-flo/OTTO"
 
 # Build settings
 plugins:
