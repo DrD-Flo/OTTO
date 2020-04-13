@@ -20,9 +20,9 @@ Learn how to build OTTO's [<i class="fad fa-cogs"></i> mechanical](/mechanical),
 ### <i class="fas fa-users"></i> About the Inventors
 OTTO was the brainchild of David Florian, who is a graduate student in Scott Guelcher’s lab at Vanderbilt. With the help of his advisor and a passionate group of undergraduates (Mateusz Odziomek, Cerie Ock, and Hannah Chen), David brought OTTO to life.
 
-Interested in lab automation or biomaterials? Learn more about the Guelcher lab [MIT License](https://my.vanderbilt.edu/guelcherlab/).
+Interested in lab automation or biomaterials? Learn more about the Guelcher lab [here](https://my.vanderbilt.edu/guelcherlab/).
 
 
 ### <i class="fad fa-file-certificate"></i> License
-OTTO is distributed under the [MIT License](https://github.com/DrD-Flo/OTTO/blob/master/LICENSE)
+OTTO is distributed under the [MIT License](https://github.com/DrD-Flo/OTTO/blob/master/LICENSE). Therefore, it is completely open-source. Build and improve it!
 
