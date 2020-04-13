@@ -17,6 +17,10 @@ Learn how to build OTTO's [<i class="fad fa-cogs"></i> mechanical](/mechanical),
 
 ![Otto, the open-source automatic liquid handler](/assets/img/overview/OTTO.png)
 
+### <i class="fas fa-users"></i> About the Inventors
+OTTO of the brainchild of David Florian, who is a graduate student in Scott Guelcher’s lab at Vanderbilt. With the help of his advisor and a passionate group of undergraduates (Mateusz Odziomek, Cerie Ock, and Hannah Chen), the OTTO was brought to life.
+
+Interested in lab automation or biomaterials? Learn more about the Guelcher lab [MIT License](https://my.vanderbilt.edu/guelcherlab/).
 
 
 ### <i class="fad fa-file-certificate"></i> License
