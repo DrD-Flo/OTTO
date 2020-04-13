@@ -28,7 +28,7 @@ If you are familiar with CNC controller boards, then perhaps you are wondering w
 ### <i class="fad fa-cog"></i> Stepper Motors and Drivers
 The first step is to wire all stepper motors to the stepper drivers. It is recommended to watch this [video](https://www.youtube.com/watch?v=IEmGOuMFPKQ) if you require more information than the schematic below.
 
-Next, the stepper drivers need to be wired to Arduino Due and power supply. For this project, TMC2660 drivers were used. These are more complicated than the run-of-the-mill stepper drivers because they communicate with the Due through a Serial Peripheral Interface (SPI) connection, which allows the motor current and microstepping to be set digitally. This is very helpful when calibrating the system. The TMC2660 also have a lot of other features, such as near silent operation. You can find their datasheet [here](https://www.trinamic.com/products/integrated-circuits/details/tmc2660-pa/) to learn more about them. With these added features comes more wiring. The SDO, SDI, SCK, CSN pins on the driver needs to be connected to their respective pins on the Due outlined below. An in depth guide on SPI is available on the [Arduino website](https://www.arduino.cc/en/reference/SPI"). If you are overwhelmed by all the wiring you can use a more basic stepper driver like the [TB6600](https://www.amazon.com/dp/B07B9ZQF5D/ref=cm_sw_em_r_mt_dp_U_AF.KEb8BAKC99) that doesn’t use SPI. The only requirements for the stepper drivers are that they support Bipolar hybrid stepper drivers and can supply at least 2A of current.
+Next, the stepper drivers need to be wired to Arduino Due and power supply. For this project, TMC2660 drivers were used. These are more complicated than the run-of-the-mill stepper drivers because they communicate with the Due through a Serial Peripheral Interface (SPI) connection, which allows the motor current and microstepping to be set digitally. This is very helpful when calibrating the system. The TMC2660 also have a lot of other features, such as near silent operation. You can find their datasheet [here](https://www.trinamic.com/products/integrated-circuits/details/tmc2660-pa/) to learn more about them. With these added features comes more wiring. The SDO, SDI, SCK, CSN pins on the driver needs to be connected to their respective pins on the Due outlined below. An in depth guide on SPI is available on the [Arduino website](https://www.arduino.cc/en/reference/SPI"). If you are overwhelmed by all the wiring you can use a more basic stepper driver like the [TB6600](https://www.amazon.com/dp/B07B9ZQF5D/ref=cm_sw_em_r_mt_dp_U_AF.KEb8BAKC99) that doesn’t use SPI. The only requirements for the stepper drivers are that they support Bipolar hybrid stepper motors and can supply at least 2A of current.
 
 
 #### X-axis
@@ -39,23 +39,22 @@ Next, the stepper drivers need to be wired to Arduino Due and power supply. For 
       <th scope="col">Arduino Pin</th>
     </tr>
   </thead>
-  <thead>
-    <tr>
-      <th scope="col">X-Axis</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
+      <th scope="row">Enable</th>
+      <td>23</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
+      <th scope="row">Step Pulse</th>
+      <td>23</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
+      <th scope="row">Direction Pulse</th>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Selecte</th>
+      <td>25</td>
     </tr>
   </tbody>
 </table>
