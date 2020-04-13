@@ -100,6 +100,9 @@ Below are tables describing the required connection to the Due board and power s
 </table>
 
 #### Y-axis
+
+OTTO’s mechanical design calls for two linear actuators to move the gantry in the Y direction. It is very important that these Y-axis stepper motors are perfectly synchronized in their movements. There are two ways to do this: 1) buy a stepper driver that can supply enough current for two stepper motors (in our case >4A) and wire the two stepper motors to the same drive or 2) wire the stepper motors to separate drivers but have the drivers share a Step, Direction, and Enable pin. When designing OTTO we followed the second route because the TMC2660 stepper drivers can supply at most 2A. This is why there is only one Arduino pin listed in the table below even though there are two stepper drivers pictured in the below schematic. 
+
 <table class="table">
   <thead>
     <tr>
