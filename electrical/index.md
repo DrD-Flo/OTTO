@@ -189,3 +189,5 @@ OTTO’s mechanical design calls for two linear actuators to move the gantry in 
 ![Otto, the open-source automatic liquid handler](../assets/img/electrical/Stepper-Motor-wiring.jpg)
 
 ### <i class="fas fa-light-switch-off"></i> Buttons and Sensors
+
+![Otto, the open-source automatic liquid handler](../assets/img/electrical/Buttons-and-switches-OTTO.jpg)
