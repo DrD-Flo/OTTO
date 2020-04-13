@@ -28,8 +28,48 @@ If you are familiar with CNC controller boards, then perhaps you are wondering w
 ### <i class="fad fa-cog"></i> Stepper Motors and Drivers
 The first step is to wire all stepper motors to the stepper drivers. It is recommended to watch this [video](https://www.youtube.com/watch?v=IEmGOuMFPKQ) if you require more information than the schematic below.
 
-Next, the stepper drivers need to be wired to Arduino Due and power supply. For this project, TMC2660 drivers were used. These are more complicated than the run-of-the-mill stepper drivers because they communicate with the Due through a Serial Peripheral Interface (SPI) connection, which allows the motor current and microstepping to be set digitally. This is very helpful when calibrating the system. The TMC2660 also have a lot of other features, such as near silent operation. You can find their datasheet [here](https://www.trinamic.com/products/integrated-circuits/details/tmc2660-pa/) to learn more about them. With these added features comes more wiring. The SDO, SDI, SCK, CSN pins on the driver needs to be connected to their respective pins on the Due outlined below. An in depth guide on SPI is available on the [Arduino website](https://www.arduino.cc/en/reference/SPI"). If you are overwhelmed by all the wiring you can use a more basic stepper driver like the [TB6600](https://www.amazon.com/dp/B07B9ZQF5D/ref=cm_sw_em_r_mt_dp_U_AF.KEb8BAKC99) that doesn’t use SPI. The only requirements for the stepper drivers are that they support Bipolar hybrid stepper drivers and can supply at least 2A of current.
+Next, the stepper drivers need to be wired to Arduino Due and power supply. For this project, TMC2660 drivers were used. These drivers are more complicated than the run-of-the-mill stepper drivers because they communicate with the Due through a Serial Peripheral Interface (SPI) connection, which allows the motor current and microstepping to be set digitally. This is very helpful when calibrating the system. The TMC2660 also have a lot of other features, such as near silent operation. You can find their datasheet [here](https://www.trinamic.com/products/integrated-circuits/details/tmc2660-pa/) to learn more about them. With these added features comes more wiring. The SDO, SDI, SCK, CSN pins on the driver needs to be connected to their respective pins on the Due outlined below. An in depth guide on SPI is available on the [Arduino website](https://www.arduino.cc/en/reference/SPI"). If you are overwhelmed by all the wiring you can use a more basic stepper driver like the [TB6600](https://www.amazon.com/dp/B07B9ZQF5D/ref=cm_sw_em_r_mt_dp_U_AF.KEb8BAKC99) that doesn’t use SPI. The only requirements for the stepper drivers are that they support Bipolar hybrid stepper motors and can supply at least 2A of current.
 
+Each TMC2660 stepper driver requires 18 electrical connections to be operational. Four of these connections are for the SPI communication (SDO, SDI, SCK, CSN), four provide power to the stepper motor’s leads (A1, A2, B1, B2), three instruct the driver on how to move the stepper motor (step, direction, enable), five of these connections need to made to ground, and finally, two connections to power (VCC to 3.3V and VS to 24V). For ease of wiring, a breadboard is strongly recommended because the drivers can be placed on the breadboard and those 5 ground connections can be connected together quickly with jumper cables. Further, the SDI, SCK, CSN from each stepper driver board need to be connected in parallel to their respective pins on the Arduino. 
+
+Below are tables describing the required connection to the Due board and power supply. If you connect your pins precisely as below then you will not have to make any changes to the firmware. However, it is not a big deal if you swap some of the digital pins. For example, if you wire the X-axis stepper driver’s enable pin to digital pin 40 instead of 22. This can be easily changed in the firmware, but you should note this difference. 
+
+#### Common Pins
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col"> Connection </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">VS</th>
+      <td>24V Power Supply</td>
+    </tr>
+    <tr>
+      <th scope="row">GND</th>
+      <td>Ground</td>
+    </tr>
+    <tr>
+      <th scope="row">VCC</th>
+      <td>Arduino 3.3V Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SDO</th>
+      <td>Arduino MISO Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SDI</th>
+      <td>Arduino MOSI Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SCK</th>
+      <td>Arduino SCK Pin</td>
+    </tr>
+  </tbody>
+</table>
 
 #### X-axis
 <table class="table">
@@ -39,25 +79,113 @@ Next, the stepper drivers need to be wired to Arduino Due and power supply. For 
       <th scope="col">Arduino Pin</th>
     </tr>
   </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Y-axis
+
+OTTO’s mechanical design calls for two linear actuators to move the gantry in the Y direction. It is very important that these Y-axis stepper motors are perfectly synchronized in their movements. There are two ways to do this: 1) buy a stepper driver that can supply enough current for two stepper motors (in our case >4A) and wire the two stepper motors to the same drive or 2) wire the stepper motors to separate drivers but have the drivers share a Step, Direction, and Enable pin. When designing OTTO we followed the second route because the TMC2660 stepper drivers can supply at most 2A. This is why there is only one Arduino pin listed in the table below even though there are two stepper drivers pictured in the below schematic. 
+
+<table class="table">
   <thead>
     <tr>
-      <th scope="col">X-Axis</th>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
+      <th scope="row">Enable</th>
+      <td>26</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
+      <th scope="row">Step Pulse</th>
+      <td>27</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
+      <th scope="row">Direction Pulse</th>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Z-axis
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>34</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Pipette
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>38</td>
     </tr>
   </tbody>
 </table>
 
 ![Otto, the open-source automatic liquid handler](../assets/img/electrical/Stepper-Motor-wiring.jpg)
+
+### <i class="fas fa-light-switch-off"></i> Buttons and Sensors
