@@ -30,6 +30,42 @@ The first step is to wire all stepper motors to the stepper drivers. It is recom
 
 Next, the stepper drivers need to be wired to Arduino Due and power supply. For this project, TMC2660 drivers were used. These are more complicated than the run-of-the-mill stepper drivers because they communicate with the Due through a Serial Peripheral Interface (SPI) connection, which allows the motor current and microstepping to be set digitally. This is very helpful when calibrating the system. The TMC2660 also have a lot of other features, such as near silent operation. You can find their datasheet [here](https://www.trinamic.com/products/integrated-circuits/details/tmc2660-pa/) to learn more about them. With these added features comes more wiring. The SDO, SDI, SCK, CSN pins on the driver needs to be connected to their respective pins on the Due outlined below. An in depth guide on SPI is available on the [Arduino website](https://www.arduino.cc/en/reference/SPI"). If you are overwhelmed by all the wiring you can use a more basic stepper driver like the [TB6600](https://www.amazon.com/dp/B07B9ZQF5D/ref=cm_sw_em_r_mt_dp_U_AF.KEb8BAKC99) that doesn’t use SPI. The only requirements for the stepper drivers are that they support Bipolar hybrid stepper motors and can supply at least 2A of current.
 
+#### Common Pins
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col"> Connection </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">VS</th>
+      <td>24V Power Supply</td>
+    </tr>
+    <tr>
+      <th scope="row">GND</th>
+      <td>Ground</td>
+    </tr>
+    <tr>
+      <th scope="row">VCC</th>
+      <td>Arduino 3.3V Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SDO</th>
+      <td>Arduino MISO Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SDI</th>
+      <td>Arduino MOSI Pin</td>
+    </tr>
+    <tr>
+      <th scope="row">SCK</th>
+      <td>Arduino SCK Pin</td>
+    </tr>
+  </tbody>
+</table>
 
 #### X-axis
 <table class="table">
@@ -53,8 +89,92 @@ Next, the stepper drivers need to be wired to Arduino Due and power supply. For 
       <td>24</td>
     </tr>
     <tr>
-      <th scope="row">Chip Selecte</th>
+      <th scope="row">Chip Select</th>
       <td>25</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Y-axis
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Z-axis
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>34</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Pipette
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stepper Driver Pin</th>
+      <th scope="col">Arduino Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Enable</th>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th scope="row">Step Pulse</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th scope="row">Direction Pulse</th>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th scope="row">Chip Select</th>
+      <td>38</td>
     </tr>
   </tbody>
 </table>
