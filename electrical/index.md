@@ -208,4 +208,8 @@ OTTO has four limit switches: one for each axis (X, Y, and Z) and one for the fl
 
 Optionally, OTTO can also use two through beam laser that check the concentricity of the pipette tips. There is information on how to wire these sensor on [Balluff’s website](https://www.balluff.com/local/us/productfinder/product/?key=BGL002T#/). They have three wires supplying the power (+ and -) and a signal wire that is pulled high or low depending on if the laser’s path is blocked. That signal wire is also passed through an Optocoupler as depicted in the schematic below. 
 
+Another optional feature of OTTO are two push buttons that can be used to pause or resume the OTTO’s motion and clearing errors. 
+
+Finally, the last switch is involved with the AC mains coming into the 24V DC power supply. This “emergency stop” switch can disconnect the DC power supply from AC power. This is a very quick way to stop OTTO if there is a problem.
+
 ![Otto, the open-source automatic liquid handler](../assets/img/electrical/Buttons-and-switches-OTTO.jpg)
