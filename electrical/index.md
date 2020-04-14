@@ -192,4 +192,16 @@ The below schematic is a picture version of what is described in the tables abov
 
 ### <i class="fas fa-light-switch-off"></i> Buttons and Sensors
 
+Understanding how to wire buttons, switches, and sensors to an Arduino is critical for having an operational liquid handler. Limit switches allows the microcontroller to establish a repeatable coordinate system. With properly wired limit switches, OTTO will be able to find pipette tips or the wells of a plate after a power cycle by performing a homing routine. It is recommended to read this [Arduino article](https://www.arduino.cc/en/Tutorial/DigitalPins) about digital pins. These pins can read the input from a switch. If this concept is new to you, then performing the button wiring tutorial found [here](https://www.arduino.cc/en/tutorial/button) is time well spent. 
+
+#### Switches and Optocouplers
+
+A switch has two states:
+1. High
+2. Low
+
+When a switch is pressed, it’s important that it switches states. This is especially true for a limit switch where a failure to switch states usually results in the machine crashing. A limit switch typically fails to switch states when there is an open circuit (i.e. improper wiring). For this reason, most limit switches are wired in a normally closed (NC) configuration. With NC wiring, the circuit is usually complete (i.e., closed) when the limit switch is untouched, but becomes open when the limit switch is bumped. Basically, with the NC switch is wired wrong and the result is an open circuit then OTTO will know not to move because it thinks it as its limit. You can learn more about the different ways to wire limit switches [here](https://github.com/gnea/grbl/wiki/Wiring-Limit-Switches).
+
+Even a NC limit switch can have erroneous states when in the presence of enough electrical noise caused by electromagnetic interface. The wires that go to the limit switch run right next the wires that power the stepper motors, and any conductor with current flowing through it has an associated magnetic field. You can learn more about electrical noise [here](https://www.fluke.com/en-us/learn/blog/power-quality/electrical-noise-and-transients). The important take away is that the lower the signal voltage the less noise can be tolerated by a circuit. The Arduino Due operates at 3.3 V. This low voltage signal is easily corrupted by noise over long wires, such as those that connect to the limit switch. For this reason, OTTO uses 24V as the signal to the limit switch, and then an optocoupler “steps” this voltage down to 3.3V. It’s very important to note that supplying anything more than 3.3V to a digital pin will fry the Arduino Due. This is why an optocoupler is must and is used for all the buttons and switches. Learn more about this technology  [here](https://www.electronics-tutorials.ws/blog/optocoupler.html). 
+
 ![Otto, the open-source automatic liquid handler](../assets/img/electrical/Buttons-and-switches-OTTO.jpg)
