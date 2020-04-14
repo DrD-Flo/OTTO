@@ -13,7 +13,7 @@ By David C. Florian, Mateusz Odziomek, Cerie L. Ock, Hannah Chen, & Scott A. Gue
 
 Figure 3:
  - [Otto's Positional Data (accuracy, spread, uncertainty)](#)
- - [Otto's pipetting accuracy (dilution curve)] (#)
+ - [Otto's pipetting accuracy (dilution curve)](#)
  
  Figure 5:
- - [Raw qPCR Data] (#)
+ - [Raw qPCR Data](#)
