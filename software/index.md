@@ -19,7 +19,9 @@ The Arduino Due is running a custom lightweight G-code firmware that receives an
 - M701 Load pipette tip
 - M1001 Check tip presence and alignment with laser system (optional feature)
 
-The Arduino Due firmware that we designed can be easily edited with the [Arduino Integrated Development Environment](https://www.arduino.cc/en/main/software). 
+The Arduino Due firmware that we designed can be easily edited with the [Arduino Integrated Development Environment](https://www.arduino.cc/en/main/software). Edits will need to be made if the wiring differs from the [electrical section](https://openliquidhandler.com/electrical/) or if you use different size rails or gearing (e.g., a 16T vs 20T pulley for time timing belt. 
+
+The Arduino Due then relies on the [AccelStepper library](https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html) to translate positions sent over by G-code into step pulses that move the motors in accordance with set acceleration and velocity curves. While Arduino has a built-in stepper motor library available, AccelStepper was chosen for a few reasons that were essential to the success of this project: it supported the acceleration and deacceleration of motors, it allowed for independent control of multiple motors that were running concurrently and it supported stepper drivers.  This ultimately allowed us to use motors that were able to conduct the precise movements OTTO needed to undertake while still maximizing the speed of its movements. 
 
 <i class="fas fa-download"></i> [Download Arduino Firmware for OTTO](#)
 
