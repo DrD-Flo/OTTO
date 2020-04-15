@@ -11,7 +11,9 @@ OTTO is a liquid handler that can automatically prepare samples for qPCR, flow c
 
 Learn how to build OTTO's [<i class="fad fa-cogs"></i> mechanical](/mechanical), [<i class="fas fa-outlet"></i> Electrical](/electrical), and [<i class="fad fa-code"></i> Software](/software) components.
 
-### <i class="fab fa-youtube"></i> Watch OTTO in action. 
+### <i class="fab fa-youtube"></i> Watch OTTO in action.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/35Zv_xLzYRs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### <i class="fas fa-cube"></i> Autodesk Fusion 360 Model 
 (It may take a couple seconds to load <i class="fad fa-spinner"></i>)
