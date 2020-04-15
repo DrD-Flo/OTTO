@@ -12,8 +12,8 @@ This is a small repository of data presented in:
 By David C. Florian, Mateusz Odziomek, Cerie L. Ock, Hannah Chen, & Scott A. Guelcher
 
 Figure 3:
- - [Otto's Positional Data (accuracy, spread, uncertainty)](#)
- - [Otto's pipetting accuracy (dilution curve)](#)
+ - [Otto's Positional Data (accuracy, spread, uncertainty)](https://github.com/DrD-Flo/OTTO/blob/master/assets/data/Figure3-Positional-Data.xlsx)
+ - [Otto's pipetting accuracy (dilution curve)](https://github.com/DrD-Flo/OTTO/blob/master/assets/data/Figure3-1to2-Dilution.xlsx)
  
  Figure 5:
- - [Raw qPCR Data](#)
+ - [Raw qPCR Data](https://github.com/DrD-Flo/OTTO/blob/master/assets/data/Figure5-Raw-qPCR-Data.xlsx)
