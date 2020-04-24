@@ -4,6 +4,8 @@ title: Mechanical Build OTTO
 ---
 ## Mechanical Build OTTO
 ---
+### <i class="far fa-scroll"></i> Bill of Materials
+[Click Here for BOM](https://github.com/DrD-Flo/OTTO/blob/master/assets/OTTO_BOM.xlsx)
 
 ### <i class="fas fa-cube"></i> Autodesk Fusion 360 Model 
 (It may take a couple seconds to load <i class="fad fa-spinner"></i>)
