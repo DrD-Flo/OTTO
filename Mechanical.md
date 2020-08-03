@@ -4,7 +4,9 @@ title: Mechanical Assembly
 ---
 
 ### <i class="far fa-scroll"></i> Bill of Materials
-[Click Here for BOM](https://github.com/DrD-Flo/OTTO/blob/master/assets/OTTO_BOM.xlsx)
+[Click Here for BOM Spreadsheet (.xlsx)](https://github.com/DrD-Flo/OTTO/blob/master/assets/download/OTTO-BOM-7-1-20.xlsx)
+<br>
+The prices listed in the table were compiled on July 1, 2020. The components were selected to minimize the number of vendors to source all the parts. More expensive components like the Balluff fork sensors and the Haydon-Kerk NEMA 11 linear actuator can be found at lower prices on the second-hand market. The pipette tip sensors can be constructed from either Balluff fork sensors for contactless probing or from mechanical switches for a more cost affordable solution (see below).
 
 ### <i class="fas fa-cube"></i> Autodesk Fusion 360 Model 
 (It may take a couple seconds to load <i class="fad fa-spinner"></i>)
