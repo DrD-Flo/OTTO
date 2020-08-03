@@ -3,6 +3,8 @@ layout: page
 title: Mechanical Assembly
 ---
 
+<br>
+<br>
 ### <i class="far fa-scroll"></i> Bill of Materials
 [Click Here for BOM Spreadsheet (.xlsx)](https://github.com/DrD-Flo/OTTO/blob/master/assets/download/OTTO-BOM-7-1-20.xlsx)
 <br>
