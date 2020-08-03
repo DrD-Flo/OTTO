@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Mechanical Build OTTO
+title: Mechanical Assembly
 ---
-## Mechanical Build OTTO
----
+
 ### <i class="far fa-scroll"></i> Bill of Materials
 [Click Here for BOM](https://github.com/DrD-Flo/OTTO/blob/master/assets/OTTO_BOM.xlsx)
 
