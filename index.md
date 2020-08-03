@@ -17,12 +17,14 @@ Learn how to build OTTO's [<i class="fad fa-cogs"></i> mechanical](/mechanical),
 <iframe width="560" height="315" src="https://www.youtube.com/embed/35Zv_xLzYRs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
+<br>
 
 ### <i class="fas fa-cube"></i> Autodesk Fusion 360 Model 
 
 (It may take a couple seconds to load <i class="fad fa-spinner"></i>)
 <iframe src="https://myhub.autodesk360.com/ue2df3503/shares/public/SH56a43QTfd62c1cd96832754d64d89c2831?mode=embed" width="600" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>  
 
+<br>
 <br>
 
 ### <i class="fas fa-users"></i> About the Inventors
@@ -32,7 +34,8 @@ OTTO was the brainchild of David Florian, who is a graduate student in Dr. Scott
 
 Interested in lab automation or biomaterials? Learn more about the Guelcher lab [here](https://my.vanderbilt.edu/guelcherlab/).
 
-
+<br>
+<br>
 ### <i class="fad fa-file-certificate"></i> License
 OTTO is distributed under the [MIT License](https://github.com/DrD-Flo/OTTO/blob/master/LICENSE). Therefore, it is completely open-source. Build and improve it!
 
