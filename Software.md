@@ -30,5 +30,5 @@ The Arduino Due firmware can be easily edited with the [Arduino Integrated Devel
 
 The Arduino Due then relies on the [AccelStepper library](https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html) to translate positions sent over by G-code into step pulses that move the motors in accordance with set acceleration and velocity curves. While Arduino has a built-in stepper motor library available, AccelStepper was chosen for a few reasons that were essential to the success of this project: it supported the acceleration and deacceleration of motors, it allowed for independent control of multiple motors that were running concurrently and it supported stepper drivers.  This ultimately allowed us to use motors that were able to conduct the precise movements OTTO needed to undertake while still maximizing the speed of its movements. 
 
-<i class="fas fa-download"></i> [Download Arduino Firmware for OTTO](#)
+<i class="fas fa-download"></i> [Download Arduino Firmware for OTTO](https://github.com/DrD-Flo/OTTO/blob/master/assets/download/G-code-Interpreter-OTTO-Arduino-Firmware.ino)
 
