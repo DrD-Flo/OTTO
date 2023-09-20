@@ -12,7 +12,7 @@ The .exe file is too large to be hosted on Github, so it is hosted on Google Dri
 <i class="fas fa-download"></i> [Download GUI Companion for OTTO](https://drive.google.com/file/d/1X9L4cbaSNF35hstXgOUNgLfSsWjkUKPp/view?usp=sharing)
 <br>
 The raw python file (dependencies will have to be downloaded seperately) is hosted on GitHub:
-<i class="fas fa-download"></i> [Download Python File](#)
+<i class="fas fa-download"></i> [Download Python File](https://github.com/DrD-Flo/OTTO/upload/master/assets/download/Python-Files)
 
 
 
